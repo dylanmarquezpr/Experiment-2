@@ -44,6 +44,9 @@ X_normalized = (X - mean) / std
 
 #### OUTPUT:
 
+<img width="520" height="237" alt="Screenshot 2025-09-01 163544" src="https://github.com/user-attachments/assets/7b0727b7-45de-40d6-a5e2-6b4a62c3d157" />
+
+
 The output is a 5×5 ndarray where each value is normalized, resulting in data centered around 0 with unit variance.
 
 ### 2. DIVISIBLE BY 3 PROBLEM
@@ -72,6 +75,8 @@ np.save("div_by_3.npy", div_by_3)
  ```
 
 #### OUTPUT:
+
+<img width="583" height="325" alt="Screenshot 2025-09-01 163557" src="https://github.com/user-attachments/assets/98879a4f-0af5-41a7-ba67-6208f4365acf" />
 
 
 The program outputs the 10×10 ndarray of squares, followed by a filtered array containing only values divisible by 3. These results demonstrate efficient data handling using NumPy’s array operations.
