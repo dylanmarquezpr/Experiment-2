@@ -10,19 +10,22 @@ This experiment focuses on using NumPy to perform mathematical preprocessing and
 
 ### 1. NORMALIZATION PROBLEM 
 
-The Normalization Problem demonstrates how to preprocess data by subtracting the mean and dividing by the standard deviation. This ensures that the data has a mean of 0 and a standard deviation of 1. In Python, this is achieved using numpy.mean() and numpy.std() functions.
+The Normalization Problem demonstrates how to preprocess data by subtracting the overall mean and dividing by the overall standard deviation of the matrix. This process transforms the values so that the resulting matrix has a mean close to 0 and a standard deviation of 1. In Python, this is implemented using the built-in array methods .mean() and .std() applied directly to the matrix.
 
 #### PROCEDURE: 
 
 1. Import NumPy.
+   
  ```python
 import numpy as np  
  ```
 
-2. Create a random 5×5 ndarray stored in variable X.
+2. Generate a random 5×5 matrix with values between 0 and 1.
+   
  ```python
 random_matrix = np.random.rand(5, 5)
  ```
+
 3. Compute the mean and standard deviation of X.
    
 ```python
@@ -41,6 +44,7 @@ normalized_matrix = (random_matrix - matrix_mean) / matrix_std
 ```python
 np.save("normalized_matrix.npy", normalized_matrix)
 ```
+
 6. Print both the original random matrix and the normalized result.
 
 ```python
@@ -53,7 +57,7 @@ print("\nNormalized Matrix:\n", normalized_matrix) #print the normalized values
 <img width="520" height="237" alt="Screenshot 2025-09-01 163544" src="https://github.com/user-attachments/assets/7b0727b7-45de-40d6-a5e2-6b4a62c3d157" />
 
 
-The output is a 5×5 ndarray where each value is normalized, resulting in data centered around 0 with unit variance.
+The output first shows the original random 5×5 matrix with values between 0 and 1. It then displays the normalized matrix, where the values are adjusted so that the overall mean is approximately 0 and the standard deviation is 1.
 
 ### 2. DIVISIBLE BY 3 PROBLEM
 The Divisible by 3 Problem involves generating the squares of the first 100 positive integers, arranging them into a 10×10 ndarray, and filtering the values divisible by 3. This applies the concepts of array creation, reshaping, and boolean indexing.
@@ -65,17 +69,20 @@ The Divisible by 3 Problem involves generating the squares of the first 100 posi
 import numpy as np
  ```
 
-1. Create a 10×10 matrix of the squares of the first 100 integers using arange() and reshape()
+2. Create a 10×10 matrix of the squares of the first 100 integers using arange() and reshape()
+   
 ```python
 X = (np.arange(1, 101) ** 2).reshape(10, 10)
 print("Original 10x10 Matrix (Squares of 1–100):\n", X)
  ```
+
 3. Extract numbers that are divisible by 3 using modulo and boolean indexing.
    
 ```python
 div_by_3 = X[X % 3 == 0] 
 print("\n The numbers divisible by 3:(Squares of 1–100)\n", div_by_3)
- ``` 
+ ```
+
 4. Save the filtered array into a .npy file.
    
  ```python
@@ -89,7 +96,7 @@ print("\n Numbers divisible by 3 saved as 'div_by_3.npy'")
 <img width="583" height="325" alt="Screenshot 2025-09-01 163557" src="https://github.com/user-attachments/assets/98879a4f-0af5-41a7-ba67-6208f4365acf" />
 
 
-The program outputs the 10×10 ndarray of squares, followed by a filtered array containing only values divisible by 3. These results demonstrate efficient data handling using NumPy’s array operations.
+The output first displays the 10×10 matrix containing the squares of the numbers from 1 to 100. It then lists only the values divisible by 3, extracted into a separate 1D array and saved as div_by_3.npy.
 
 
 ## CONCLUSION 
