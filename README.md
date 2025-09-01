@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-This experiment focuses on using NumPy to perform mathematical preprocessing and array manipulations. It covers two problems: Normalization and Divisible by 3. The Normalization Problem introduces the concept of centering and scaling data, a key preprocessing step in data analytics. The Divisible by 3 Problem involves creating a structured 10×10 ndarray and applying filtering techniques to extract values that meet specific conditions. Together, these tasks strengthen the understanding of NumPy functions such as mean(), std(), random number generation, array reshaping, and element-wise operations.
+This experiment focuses on using NumPy to perform mathematical preprocessing and array manipulations. It covers two problems: Normalization and Divisible by 3. The Normalization Problem introduces the concept of centering and scaling data, a key preprocessing step in data analytics. The Divisible by 3 Problem involves creating a structured 10×10 ndarray and applying filtering techniques to extract values that meet specific conditions. Together, these tasks strengthen the understanding of NumPy functions such as mean(), std(), random number generation, array reshaping, and element operations.
 
 ### 1. NORMALIZATION PROBLEM 
 
@@ -81,6 +81,10 @@ np.save("div_by_3.npy", div_by_3)
 
 The program outputs the 10×10 ndarray of squares, followed by a filtered array containing only values divisible by 3. These results demonstrate efficient data handling using NumPy’s array operations.
 
+
+## CONCLUSION 
+
+The experiment is a demonstration of the practical use of NumPy in simplifying mathematical array manipulations and computation. The Normalization Problem showed how data can be standardized for consistency in analysis, while the Divisible by 3 Problem showcased array creation and conditional filtering. Together, these exercises really showed of how is NumPy in handling numerical tasks that would otherwise be tedious to perform manually.
 
 
 
