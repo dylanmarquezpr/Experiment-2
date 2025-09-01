@@ -16,31 +16,37 @@ The Normalization Problem demonstrates how to preprocess data by subtracting the
 
 1. Import NumPy.
  ```python
-import numpy as np
+import numpy as np  
  ```
 
 2. Create a random 5×5 ndarray stored in variable X.
  ```python
-X = np.random.rand(5, 5)
+random_matrix = np.random.rand(5, 5)
  ```
 3. Compute the mean and standard deviation of X.
    
 ```python
-mean = X.mean()
-std = X.std()
+matrix_mean = random_matrix.mean() 
+matrix_std = random_matrix.std() 
  ```
 
 4. Normalize the ndarray using the formula : Z = X−X / σ
 
 ```python
-X_normalized = (X - mean) / std
+normalized_matrix = (random_matrix - matrix_mean) / matrix_std
  ```
 
 5. Save the normalized ndarray as X_normalized.npy.
 
 ```python
- np.save("X_normalized.npy", X_normalized)
- ```
+np.save("normalized_matrix.npy", normalized_matrix)
+```
+6. Print both the original random matrix and the normalized result.
+
+```python
+print("Original Random Matrix:\n", random_matrix) #print the original values
+print("\nNormalized Matrix:\n", normalized_matrix) #print the normalized values
+```
 
 #### OUTPUT:
 
@@ -53,25 +59,29 @@ The output is a 5×5 ndarray where each value is normalized, resulting in data c
 The Divisible by 3 Problem involves generating the squares of the first 100 positive integers, arranging them into a 10×10 ndarray, and filtering the values divisible by 3. This applies the concepts of array creation, reshaping, and boolean indexing.
 
 #### PROCEDURE:
+1. Import the NumPy library.
 
-1. Generate squares of integers from 1 to 100.
 ```python
-squares = np.arange(1, 101) ** 2
+import numpy as np
  ```
-3. Reshape the result into a 10×10 ndarray A.
+
+1. Create a 10×10 matrix of the squares of the first 100 integers using arange() and reshape()
+```python
+X = (np.arange(1, 101) ** 2).reshape(10, 10)
+print("Original 10x10 Matrix (Squares of 1–100):\n", X)
+ ```
+3. Extract numbers that are divisible by 3 using modulo and boolean indexing.
    
 ```python
-A = squares.reshape(10, 10)
+div_by_3 = X[X % 3 == 0] 
+print("\n The numbers divisible by 3:(Squares of 1–100)\n", div_by_3)
  ``` 
-5. Apply a condition to extract values divisible by 3.
+4. Save the filtered array into a .npy file.
    
  ```python
-div_by_3 = A[A % 3 == 0]
- ```
-7. Save the extracted values as div_by_3.npy.
+np.save("div_by_3.npy", div_by_3) 
+print("\n Numbers divisible by 3 saved as 'div_by_3.npy'")
 
-```python
-np.save("div_by_3.npy", div_by_3)
  ```
 
 #### OUTPUT:
